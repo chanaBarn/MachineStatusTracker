@@ -14,9 +14,9 @@ namespace MachineStatusTracker
         {
             InitializeComponent();
             DataContext = this;
-            Machines = new ObservableCollection<Machine>() { };
-            // Sample machines for testing
+            Machines = new ObservableCollection<Machine>() { };// Collection of machines
 
+            // Sample machines for testing
             Machines.Add(new Machine("Machine 1", "Description 1", MachineStatus.Idle, "Notes 1"));
             Machines.Add(new Machine("Machine 2", "Description 2", MachineStatus.Offline, "Notes 2"));
             for (int i = 3; i < 15; i++)
@@ -33,7 +33,7 @@ namespace MachineStatusTracker
                 AddMachineCard(machineCard);
             }
         }
-
+        // Method to add a machine card to the UI
         private void AddMachineCard(Machine machineCard)
         {
             MachineCardUC machineCardUC = new MachineCardUC(machineCard);
@@ -43,6 +43,7 @@ namespace MachineStatusTracker
             machineCardUC.MachineDelete += DeleteMachine_Click;
         }
 
+        // Event handler for deleting a machine
         private void DeleteMachine_Click(object sender, MachineEventArgs e)
         {
             Machine machineToDelete = Machines.FirstOrDefault(m => m.MachineName == e.MachineName);
@@ -57,6 +58,7 @@ namespace MachineStatusTracker
             }
         }
 
+        // Event handler for adding a machine
         private void AddMachine_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -78,6 +80,7 @@ namespace MachineStatusTracker
             }
         }
 
+        // Event handler for editing a machine
         private void MachineEditHandler(object sender, MachineEventArgs e)
         {
             
@@ -99,6 +102,7 @@ namespace MachineStatusTracker
             //MessageHelper.ShowInformationMessage("Machines filtered successfully.");
         }
 
+        // Method to filter machines based on selected status
         private void FilterMachines()
         {
             string selectedStatus = (cmbStatus.SelectedItem as ComboBoxItem)?.Content as string;

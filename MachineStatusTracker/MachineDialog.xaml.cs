@@ -5,6 +5,7 @@ using System.Xml.Linq;
 
 namespace MachineStatusTracker
 {
+    // EventArgs class for machine-related events
     public partial class MachineDialog : Window
     {
         public string MachineName { get; set; }
@@ -12,13 +13,14 @@ namespace MachineStatusTracker
         public MachineStatus Status { get; set; }
         public string Notes { get; set; }
 
+        // Collection for machine status values
         public ObservableCollection<MachineStatus> StatusValues { get; set; }
-        //private ObservableCollection<Machine> filteredMachines;
 
         public MachineDialog()
         {
             InitializeComponent();
         }
+
         public MachineDialog(string name, string description, MachineStatus status, string notes)
         {
             InitializeComponent();
@@ -37,11 +39,12 @@ namespace MachineStatusTracker
             cmbStatus.SelectedIndex = (int)status;
         }
 
+        // Event handler for Save button click
         private void Save_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                if (!string.IsNullOrEmpty(txtName.Text) )
+                if (!string.IsNullOrEmpty(txtName.Text))
                 {
                     if (cmbStatus.SelectedIndex != -1)
                     {
@@ -50,12 +53,11 @@ namespace MachineStatusTracker
                         Status = (MachineStatus)cmbStatus.SelectedIndex;
                         Notes = txtNotes.Text;
 
-                        DialogResult = true; // Save changes and close the dialog
+                        DialogResult = true; 
                     }
                     else
                     {
-                        MessageHelper.ShowErrorMessage("status must be valid.");
-
+                        MessageHelper.ShowErrorMessage("Status must be valid.");
                     }
                 }
                 else
@@ -68,9 +70,11 @@ namespace MachineStatusTracker
                 MessageHelper.ShowErrorMessage("An error occurred: " + ex.Message);
             }
         }
+
+        // Event handler for Cancel button click
         private void Cancel_Click(object sender, RoutedEventArgs e)
         {
-            DialogResult = false; // Cancel the operation and close the dialog
+            DialogResult = false; 
             MessageHelper.ShowInformationMessage("Operation canceled.");
         }
     }

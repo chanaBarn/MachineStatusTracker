@@ -4,6 +4,7 @@ using MaterialDesignThemes.Wpf;
 
 namespace MachineStatusTracker
 {
+    // Converter to map machine status enum values to corresponding Material Design icons
     public class StatusToIconConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
@@ -20,10 +21,10 @@ namespace MachineStatusTracker
                     case MachineStatus.Offline:
                         return PackIconKind.StopCircleOutline;
                     default:
-                        return PackIconKind.None; // If no matching status, return None icon
+                        return PackIconKind.None; 
                 }
             }
-            return PackIconKind.None; // Default to None icon if value is null or not of type Status
+            return PackIconKind.None; 
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, System.Globalization.CultureInfo culture)

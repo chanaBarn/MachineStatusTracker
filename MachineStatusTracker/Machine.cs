@@ -3,6 +3,7 @@ using System.Windows;
 
 namespace MachineStatusTracker
 {
+    // Enum for machine status
     public enum MachineStatus
     {
         Running,
@@ -35,28 +36,10 @@ namespace MachineStatusTracker
             {
                 _status = value;
                 OnPropertyChanged(nameof(Status));
-                OnPropertyChanged(nameof(StatusIcon));
             }
         }
 
-        public string StatusIcon
-        {
-            get
-            {
-                switch (Status)
-                {
-                    case MachineStatus.Running:
-                        return "Icons/run.png"; 
-                    case MachineStatus.Idle:
-                        return "Icons/run.png";
-                    case MachineStatus.Offline:
-                        return "Icons/run.png";
-                    default:
-                        return "";
-                }
-            }
-        }
-
+      
       
 
         public string Notes

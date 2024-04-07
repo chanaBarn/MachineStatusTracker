@@ -8,6 +8,7 @@ using System.Windows.Controls;
 
 namespace MachineStatusTracker
 {
+    // Validation rule for machine status input
     public class StatusValidationRule : ValidationRule
     {
         public override ValidationResult Validate(object value, CultureInfo cultureInfo)
