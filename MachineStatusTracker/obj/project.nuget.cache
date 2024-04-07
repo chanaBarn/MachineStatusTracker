@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "dgSpecHash": "GCdE8MkTR4TIX8LsRxHjnrM5b/RwNggxLFWe9Vyji/KMnR7TfN8mpUXNhcGDqjqTDKVDbeqhbPkYTRW2ymRYQA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\The user\\Downloads\\bsdMachineStatusTracker\\MachineStatusTracker\\MachineStatusTracker\\MachineStatusTracker.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\The user\\.nuget\\packages\\material.icons\\2.1.9\\material.icons.2.1.9.nupkg.sha512",
+    "C:\\Users\\The user\\.nuget\\packages\\material.icons.wpf\\2.1.9\\material.icons.wpf.2.1.9.nupkg.sha512",
+    "C:\\Users\\The user\\.nuget\\packages\\materialdesigncolors\\3.0.0\\materialdesigncolors.3.0.0.nupkg.sha512",
+    "C:\\Users\\The user\\.nuget\\packages\\materialdesignthemes\\5.0.0\\materialdesignthemes.5.0.0.nupkg.sha512",
+    "C:\\Users\\The user\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512",
+    "C:\\Users\\The user\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.28\\microsoft.windowsdesktop.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\The user\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.28\\microsoft.netcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\The user\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.28\\microsoft.aspnetcore.app.ref.6.0.28.nupkg.sha512",
+    "C:\\Users\\The user\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.28\\microsoft.netcore.app.host.win-x64.6.0.28.nupkg.sha512"
+  ],
+  "logs": []
+}
